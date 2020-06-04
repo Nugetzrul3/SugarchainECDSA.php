@@ -1,24 +1,24 @@
 <?php
 
-require_once '../src/BitcoinPHP/BitcoinECDSA/BitcoinECDSA.php';
+require_once '../src/SugarchainPHP/SugarchainECDSA/SugarchainECDSA.php';
 
-use BitcoinPHP\BitcoinECDSA\BitcoinECDSA;
+use SugarchainPHP\SugarchainECDSA\SugarchainECDSA;
 
-$bitcoinECDSA = new BitcoinECDSA();
-$bitcoinECDSA->generateRandomPrivateKey(); //generate new random private key
+$sugarchainECDSA = new SugarchainECDSA();
+$sugarchainECDSA->generateRandomPrivateKey(); //generate new random private key
 
-$wif = $bitcoinECDSA->getWif();
-$address = $bitcoinECDSA->getAddress();
+$wif = $sugarchainECDSA->getWif();
+$address = $sugarchainECDSA->getAddress();
 echo "Address : " . $address . PHP_EOL;
 echo "WIF : " . $wif . PHP_EOL;
 
-unset($bitcoinECDSA); //destroy instance
+unset($sugarchainECDSA); //destroy instance
 
 //import wif
-$bitcoinECDSA = new BitcoinECDSA();
-if($bitcoinECDSA->validateWifKey($wif)) {
-    $bitcoinECDSA->setPrivateKeyWithWif($wif);
-    $address = $bitcoinECDSA->getAddress();
+$sugarchainECDSA = new SugarchainECDSA();
+if($sugarchainECDSA->validateWifKey($wif)) {
+    $sugarchainECDSA->setPrivateKeyWithWif($wif);
+    $address = $sugarchainECDSA->getAddress();
     echo "imported address : " . $address . PHP_EOL;
 } else {
     echo "invalid WIF key" . PHP_EOL;

@@ -1,14 +1,14 @@
 {
-    "name": "bitcoin-php/bitcoin-ecdsa",
+    "name": "sugarchain-php/sugarchain-ecdsa",
     "type": "library",
-    "description": "PHP library allowing to generate BTC addresses from private keys",
-    "keywords": ["ECDSA","Bitcoin"],
+    "description": "PHP library allowing to generate SUGAR addresses from private keys",
+    "keywords": ["ECDSA","Sugarchain"],
     "homepage": "https://github.com/BitcoinPHP/BitcoinECDSA.php",
     "license": "unlicense",
     "authors": [
         {
-            "name": "BitcoinPHP",
-            "email": "panda@panda.cat",
+            "name": "Nugetzrul3 (Original BitcoinPHP)",
+            "email": "popingcorn12@gmail.com",
             "homepage": "http://github.com/BitcoinPHP",
             "role": "Developer"
         }
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-0": {
-            "BitcoinPHP\\BitcoinECDSA": "src"
+            "SugarchainPHP\\SugarchainECDSA": "src"
         }
     },
     "require-dev": {
